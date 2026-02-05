@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 *class
 .vscode/
+=======
+target/nano .gitignore
+>>>>>>> 2612f25 (Lab02: Update shapes and add comments for refactoring)
