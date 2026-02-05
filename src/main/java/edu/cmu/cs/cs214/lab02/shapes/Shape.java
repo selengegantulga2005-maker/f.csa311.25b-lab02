@@ -1,13 +1,28 @@
 package edu.cmu.cs.cs214.lab02.shapes;
 
-public interface Shape {
-        // interface baih ymar ch hereggui bolson
-        // uchir n hooson buyu uureggui baina
-        // dursuudiig poliform maygaar ashiglah bolomjgui
-/**
- * shape interface ni buh dursnii niitleg z
- * buh durs uuriiguu zurah chadvartai baih ystoi
+/*
+ * Зассан зүйл:
+ *  - Анхны кодод Shape интерфэйс хоосон байсан → ямар ч abstraction өгөөгүй.
+ *  - Renderer болон бусад классууд хэрэглэж чадах 共 behavior байхгүй байсан.
+ * Яагаад зассан:
+ *  - Polymorphism ашиглахын тулд нийтлэг behavior заавал хэрэгтэй.
+ *  - Renderer зөвхөн Shape интерфэйсээр дамжина — хэрэгжилт рүү хамаарахгүй.
  */
+public interface Shape {
+
+    /*
+     * Нэмэлт: Бүх дүрс талбайгаа заавал олгох capability–тэй байх ёстой.
+     */
     double getArea();
-    void draw(); // renderer ene function-iig l duudaj ajillana
+
+    /*
+     * Нэмэлт: Renderer нь shape-ийн нэрийг мэдэхгүй → интерфэйсээр дамжуулж авна.
+     */
+    String getName();
+
+    /*
+     * Нэмэлт: Дүрс өөрийгөө "draw()" хийх логикийг өөрөө мэднэ.
+     * Renderer нь хэрэгжилт рүү хандах шаардлагагүй боллоо.
+     */
+    void draw();
 }
